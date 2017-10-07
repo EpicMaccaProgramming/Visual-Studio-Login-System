@@ -13,6 +13,7 @@ namespace Login_System
 {
     public partial class register : Form
     {
+        //Amount of accounts variable
         public static int amountOfAccounts = 1;
 
         public register()
@@ -20,14 +21,17 @@ namespace Login_System
             InitializeComponent();
         }
 
-        private void ollol_Click(object sender, EventArgs e)
+        private void RegisterAccount_Click(object sender, EventArgs e)
         {
+            //Variables
             int userCounter = 0;
             bool validFile = false;
 
+            //Save text in text input to list
             Form1.user.Add(UsernameText.Text);
             Form1.pass.Add(PasswordText.Text);
 
+            //Check how many accounts there currently are
             while (!validFile)
             {
                 if (!File.Exists(Form1.storeUserPath + "/" + amountOfAccounts + ".txt"))
@@ -40,9 +44,11 @@ namespace Login_System
                     amountOfAccounts += 1;
                 }
             }
+
+            //Create new file
             TextWriter user = File.CreateText(Form1.storeUserPath + "/" + amountOfAccounts + ".txt");
 
-
+            //Add username and password to file
             foreach (string item in Form1.user)
             {
                 user.Write(Form1.user[userCounter] + " ");
@@ -54,6 +60,7 @@ namespace Login_System
             Form1.user.Clear();
             Form1.pass.Clear();
 
+            //Open login form
             var login = new Form1();
             login.Show();
             Hide();
@@ -61,6 +68,7 @@ namespace Login_System
 
         private void Back_Click(object sender, EventArgs e)
         {
+            //Open login form
             var login = new Form1();
             login.Show();
             Hide();

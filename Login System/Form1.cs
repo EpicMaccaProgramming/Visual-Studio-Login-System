@@ -54,6 +54,7 @@ namespace Login_System
             int passwordCounter = 0;
             bool checkedUserAndPass = false;
 
+            //Read username/password files and info to lists
             for (int i = 1; i <= numberOfAccounts - 1; i++)
             {
                 splitUserAndPass.Add(File.ReadAllText(storeUserPath + "/" + i + ".txt"));
@@ -81,6 +82,7 @@ namespace Login_System
                 passwords.Add(ypass[i1]);
             }
 
+            //Check if username/password entered was correct
             for (int i = 0; i <= yuser.Count - 1; i++)
             {
                 if (UsernameText.Text == usernames[i])
@@ -104,6 +106,7 @@ namespace Login_System
             }
         }
 
+        //Go to register
         private void Register_Click(object sender, EventArgs e)
         {
             var register = new register();

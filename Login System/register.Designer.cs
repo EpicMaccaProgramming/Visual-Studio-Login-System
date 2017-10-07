@@ -32,7 +32,7 @@
             this.Password = new System.Windows.Forms.Label();
             this.UsernameText = new System.Windows.Forms.TextBox();
             this.PasswordText = new System.Windows.Forms.TextBox();
-            this.ollol = new System.Windows.Forms.Button();
+            this.RegisterAccount = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -73,16 +73,16 @@
             this.PasswordText.Size = new System.Drawing.Size(163, 32);
             this.PasswordText.TabIndex = 9;
             // 
-            // ollol
+            // RegisterAccount
             // 
-            this.ollol.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ollol.Location = new System.Drawing.Point(78, 198);
-            this.ollol.Name = "ollol";
-            this.ollol.Size = new System.Drawing.Size(113, 39);
-            this.ollol.TabIndex = 11;
-            this.ollol.Text = "Register";
-            this.ollol.UseVisualStyleBackColor = true;
-            this.ollol.Click += new System.EventHandler(this.ollol_Click);
+            this.RegisterAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisterAccount.Location = new System.Drawing.Point(78, 198);
+            this.RegisterAccount.Name = "RegisterAccount";
+            this.RegisterAccount.Size = new System.Drawing.Size(113, 39);
+            this.RegisterAccount.TabIndex = 11;
+            this.RegisterAccount.Text = "Register";
+            this.RegisterAccount.UseVisualStyleBackColor = true;
+            this.RegisterAccount.Click += new System.EventHandler(this.RegisterAccount_Click);
             // 
             // Back
             // 
@@ -101,7 +101,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(478, 261);
             this.Controls.Add(this.Back);
-            this.Controls.Add(this.ollol);
+            this.Controls.Add(this.RegisterAccount);
             this.Controls.Add(this.PasswordText);
             this.Controls.Add(this.UsernameText);
             this.Controls.Add(this.Password);
@@ -119,7 +119,7 @@
         private System.Windows.Forms.Label Password;
         private System.Windows.Forms.TextBox UsernameText;
         private System.Windows.Forms.TextBox PasswordText;
-        private System.Windows.Forms.Button ollol;
+        private System.Windows.Forms.Button RegisterAccount;
         private System.Windows.Forms.Button Back;
     }
 }
