@@ -30,7 +30,7 @@ namespace Login_System
 
             while (!validFile)
             {
-                if (!File.Exists("C:/UserInfo/" + amountOfAccounts + ".txt"))
+                if (!File.Exists(Form1.storeUserPath + "/" + amountOfAccounts + ".txt"))
                 {
                     validFile = true;
                 }
@@ -40,7 +40,7 @@ namespace Login_System
                     amountOfAccounts += 1;
                 }
             }
-            TextWriter user = File.CreateText("C:/UserInfo/" + amountOfAccounts + ".txt");
+            TextWriter user = File.CreateText(Form1.storeUserPath + "/" + amountOfAccounts + ".txt");
 
 
             foreach (string item in Form1.user)

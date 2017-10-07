@@ -25,9 +25,7 @@ namespace Login_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TextWriter txt = new StreamWriter("C:/UserInfo/Usernames.txt");
-            txt.Write(textBox1.Text);
-            txt.Close();
+
         }
     }
 }

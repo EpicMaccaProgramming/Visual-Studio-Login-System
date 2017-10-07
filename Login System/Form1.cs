@@ -12,6 +12,10 @@ namespace Login_System
 {
     public partial class Form1 : Form
     {
+        //CHANGE THIS TO THE PATH WHERE THE USERNAMES/PASSWORDS WILL BE STORED
+        public static string storeUserPath = "C:/UserInfo";
+
+        //Variables
         public static List<string> user = new List<string>();
         public static List<string> pass = new List<string>();
         public static List<string> splitUserAndPass = new List<string>();
@@ -34,9 +38,10 @@ namespace Login_System
         private void Login_Click(object sender, EventArgs e)
         {
 
+            //Check how many accounts there currently are
             while (!validFile)
             {
-                if (!File.Exists("C:/UserInfo/" + numberOfAccounts + ".txt"))
+                if (!File.Exists(storeUserPath + "/" + numberOfAccounts + ".txt"))
                 {
                     validFile = true;
                 }
@@ -51,7 +56,7 @@ namespace Login_System
 
             for (int i = 1; i <= numberOfAccounts - 1; i++)
             {
-                splitUserAndPass.Add(File.ReadAllText("C:/UserInfo/" + i + ".txt"));
+                splitUserAndPass.Add(File.ReadAllText(storeUserPath + "/" + i + ".txt"));
             }
 
             for (int i = 0; i <= splitUserAndPass.Count - 1; i++)
